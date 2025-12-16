@@ -1,4 +1,4 @@
-# First group meeting
+# Meeting 1 | 2025-12-15 12:00
 
 Keep it simple.
 
