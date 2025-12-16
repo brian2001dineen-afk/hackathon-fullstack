@@ -90,14 +90,17 @@ Technologies and Methodologies used:
 
 ---
 
+
 ## Early Design
 
 ### Wireframes
 
----
+
+</details>
 
 ## Features
 
+<details>
 ### Landing Page
 
 ### Navigation & User Experience
@@ -108,27 +111,29 @@ Technologies and Methodologies used:
 
 ### Accessibility Features
 
----
+</details>
 
 ## Testing
 
+<details>
 ### Manual Testing
 
 ### Browser Testing
 
 ### Validator Testing
 
----
+</details>
 
 ## Technologies Used
 
+<details>
 ### Database Structure
 
 ### Future Features
 
 ### Known Bugs
 
----
+</details>
 
 ## Deployment Instructions
 <details>
@@ -146,4 +151,11 @@ Technologies and Methodologies used:
   9. Testing and validation is carried out on the deployed to Heroku project.
   10. To emphasise again environment variables store sensitive data and DEBUG is set to False in the production environment.
 </details>
----
+
+## Credits
+<details>
+
+### Code
+<details>
+Extra code from Codestar walkthrough project from Code Institute 
+</details>
