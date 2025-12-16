@@ -43,6 +43,20 @@ You can access the blog [here](https://hackathon-fullstack-207046bedb7e.herokuap
 
 ## Project Overview
 
+<details>
+A website built using Django which allows users to share blogs about their Reflections on the Bootcamp and to comment on the Reflections shared. Our group were inspired to build Reflections by our experiences on the Bootcamp. Reflections is our Full Stack Hackathon project. This project uses and demonstrates a culmination of our learning  on the course.
+
+Technologies and Methodologies used:
+
+- PostgreSQL, integrated through Django - for Database Management
+- HTML, CSS, JavaScript - for Frontend Development
+- Python, Django framework - for Backend Development
+- Cloudinary - for API
+- Using AI tools, e.g. Copilot and  ChatGPT 4.0 in the planning and debugging process
+- Agile methodology - for Project planning and tracking
+- Git & GitHub - for Version Control
+- Heroku - for deployment
+</details>
 ### User Experience (UX)
 
 ### User Stories
