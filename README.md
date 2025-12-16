@@ -124,7 +124,7 @@ Technologies and Methodologies used:
   6. The project is deployed to Heroku using Github integration. Deployment is from the main branch. 
   7. The requirements.txt file handles the dependecies to ensure that all required packages are installed in the production environment.
   8. The deployed to Heroku project is tested to check that the functionality and design are consistent with those on the development environment.
-  9. Testing and validation is carried out on the deployed to Herku project.
+  9. Testing and validation is carried out on the deployed to Heroku project.
   10. To emphasise again environment variables store sensitive data and DEBUG is set to False in the production environment.
 </details>
 ---
