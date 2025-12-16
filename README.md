@@ -58,7 +58,9 @@ Technologies and Methodologies used:
 - Heroku - for deployment
 </details>
 
-### User Experience (UX)
+## User Experience (UX)
+
+<details>
 
 ### User Stories
 
@@ -88,10 +90,12 @@ Technologies and Methodologies used:
 
 #### Wont-Have Features
 
----
+</details>
 
 
 ## Early Design
+
+<details>
 
 ### Wireframes
 
@@ -116,6 +120,7 @@ Technologies and Methodologies used:
 ## Testing
 
 <details>
+
 ### Manual Testing
 
 ### Browser Testing
