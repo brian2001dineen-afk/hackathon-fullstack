@@ -57,41 +57,34 @@ Technologies and Methodologies used:
 - Git & GitHub - for Version Control
 - Heroku - for deployment
 </details>
+
 ### User Experience (UX)
 
 ### User Stories
 
 #### Must-Have Features
-As a Site User, I can click on a post so that I can read the full text.
-As a Site User I can register an account so that I can comment on a post.
-As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
-As a Site Admin I can create draft posts so that I can finish writing the content later
-
-
-
-
-
-
-
-
-
-
-
+1. As a Site User, I can click on a post so that I can read the full text.
+2. As a Site User I can register an account so that I can comment on a post.
+3. As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
+4. As a Site Admin I can create draft posts so that I can finish writing the content later
+5. As a Developer I want to create a README.md so that anyone looking at the project has the required documentation.
 
 #### Should-Have Features
-As a site user, I can view a paginated list of posts so that I can select which post I want to view.
-As a Site User / Admin I can view comments on an individual post so that I can read the conversation
-As a Site User I can leave comments on a post so that I can be involved in the conversation
-As a Site User I can modify or delete my comment on a post so that I can be involved in the conversation
-As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
-As a Site User, I can click on the About link so that I can read about the site.
-As a Site Admin, I can create or update the about page content so that it is available on the site.
+1. As a site user, I can view a paginated list of posts so that I can select which post I want to view.
+2. As a Site User / Admin I can view comments on an individual post so that I can read the conversation
+3. As a Site User I can leave comments on a post so that I can be involved in the conversation
+4. As a Site User I can modify or delete my comment on a post so that I can be involved in the conversation
+5. As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
+6. As a Site User, I can click on the About link so that I can read about the site.
+7. As a Site Admin, I can create or update the about page content so that it is available on the site.
+8. As a Site Admin I want to add some actual blog content so that site users can see it and comment on it on the site.
+
 
 #### Could-Have Features
 
-As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration.
-As a Site Owner I can store collaboration requests in the database so that I can review them.
-As a Site Owner I can mark collaboration requests as "read" so that I can see how many I still need to process
+1. As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration.
+2. As a Site Owner I can store collaboration requests in the database so that I can review them.
+3. As a Site Owner I can mark collaboration requests as "read" so that I can see how many I still need to process
 
 #### Wont-Have Features
 
