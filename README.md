@@ -57,6 +57,7 @@ Technologies and Methodologies used:
 - Git & GitHub - for Version Control
 - Heroku - for deployment
 </details>
+
 ### User Experience (UX)
 
 ### User Stories
@@ -127,4 +128,5 @@ Technologies and Methodologies used:
   9. Testing and validation is carried out on the deployed to Heroku project.
   10. To emphasise again environment variables store sensitive data and DEBUG is set to False in the production environment.
 </details>
+
 ---
