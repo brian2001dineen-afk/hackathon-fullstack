@@ -112,5 +112,19 @@ Technologies and Methodologies used:
 ---
 
 ## Deployment Instructions
+<details>
 
+- Deployment is to Heroku
+- High-Level Steps to deploy to Heroku: 
+  1. Configure the Django settings to handle both development and production environments.
+  2. Environment variables are used to manage sensitive information and configuration settings. 
+  3. PostgreSQL is the database used for production on Heroku.
+  4. WhiteNoise middleware is used to manage static files in production.
+  5. Debug mode is set to False in the settings file before commiting and pushing to Github.
+  6. The project is deployed to Heroku using Github integration. Deployment is from the main branch. 
+  7. The requirements.txt file handles the dependecies to ensure that all required packages are installed in the production environment.
+  8. The deployed to Heroku project is tested to check that the functionality and design are consistent with those on the development environment.
+  9. Testing and validation is carried out on the deployed to Herku project.
+  10. To emphasise again environment variables store sensitive data and DEBUG is set to False in the production environment.
+</details>
 ---
