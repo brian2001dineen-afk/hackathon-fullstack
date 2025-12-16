@@ -1,3 +1,4 @@
 env_nu/
-env.py
+/env.py
 blog/fixtures/
+.venv/
