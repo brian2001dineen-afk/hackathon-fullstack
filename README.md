@@ -33,12 +33,11 @@
 
 # Reflections
 
-> A blog for sharing our reflections and insights on the full-stack code institute course.
+A blog for sharing our reflections and insights on the full-stack code institute course.
 
 You can access the blog [here](https://hackathon-fullstack-207046bedb7e.herokuapp.com).
 
 
-...
 
 ## Project Overview
 
@@ -105,6 +104,7 @@ Technologies and Methodologies used:
 ## Features
 
 <details>
+
 ### Landing Page
 
 ### Navigation & User Experience
