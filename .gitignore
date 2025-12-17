@@ -3,3 +3,4 @@ env_nu/
 blog/fixtures/
 .venv/
 venv/
+__pycache__/

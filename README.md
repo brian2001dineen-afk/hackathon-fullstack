@@ -98,6 +98,7 @@ Technologies and Methodologies used:
 
 ### Wireframes
 
+![Homepage wireframe](README_assets/wireframeV1.png)
 
 </details>
 
@@ -131,16 +132,19 @@ Technologies and Methodologies used:
 ## Technologies Used
 
 <details>
+
 - PostgreSQL, integrated through Django - for Database Management
 - HTML, CSS, JavaScript - for Frontend Development
 - Python, Django framework - for Backend Development
 - Cloudinary - for API
-- USING AI TOOLS, e.g. 
+- USING AI TOOLS, e.g. .......
 - Git & GitHub - for Version Control
 - Heroku - for deployment
 </details>
 
 ### Database Structure
+
+![ERD](README_assets/erdV1.png)
 
 ### Future Features
 
