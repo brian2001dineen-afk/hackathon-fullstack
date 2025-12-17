@@ -38,6 +38,8 @@
 You can access the blog [here](https://hackathon-fullstack-207046bedb7e.herokuapp.com).
 
 
+...
+
 ## Project Overview
 
 <details>
