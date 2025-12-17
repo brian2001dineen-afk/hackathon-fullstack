@@ -37,7 +37,6 @@
 
 You can access the blog [here](https://hackathon-fullstack-207046bedb7e.herokuapp.com).
 
-## Table of Contents
 
 ...
 
@@ -132,6 +131,7 @@ Technologies and Methodologies used:
 ## Technologies Used
 
 <details>
+
 ### Database Structure
 
 ### Future Features
