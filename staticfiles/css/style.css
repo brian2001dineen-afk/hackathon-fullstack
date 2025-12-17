@@ -1,165 +1,174 @@
+/* Color Palette */
+:root {
+    --color-cream: #dbd6c1;
+    --color-blue: #7597c4;
+    --color-tan-light: #cab9a9;
+    --color-tan-dark: #b79d88;
+    --color-slate: #768693;
+}
+
 body {
-   background-color: #f9fafc;
+    background-color: var(--color-cream);
 }
 
 .brand {
-   font-family: Lato, sans-serif;
-   font-size: 1.4rem;
-   font-weight: 700;
-   color: #4a4a4f;
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-slate);
 }
 
 .red-o {
-   color: #e84610;
+    color: var(--color-blue);
 }
 
 .thin {
-   font-weight: 300;
+    font-weight: 300;
 }
 
 .light-bg {
-   background-color: #fff;
+    background-color: var(--color-tan-light);
 }
 
 .dark-bg {
-   background-color: #445261;
+    background-color: var(--color-slate);
 }
 
 .main-bg {
-   background-color: #f9fafc;
+    background-color: var(--color-cream);
 }
 
 .card {
-   border: none;
-   background-color: transparent;
+    border: none;
+    background-color: transparent;
 }
 
 .image-container {
-   position: relative;
+    position: relative;
 }
 
 .image-flash {
-   position: absolute;
-   bottom: 5%;
-   min-width: 30%;
-   left: -2px;
-   background-color: #188181;
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: var(--color-blue);
 }
 
 .scale {
-   width: 100%;
-   height: auto;
+    width: 100%;
+    height: auto;
 }
 
 .author {
-   color: white;
-   margin: 4px;
-   text-transform: uppercase;
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
 }
 
 .masthead {
-   margin-top: 10px;
-   overflow: hidden;
-   position: relative;
-   display: inline-block;
-   height: 33vh;
-   width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    height: 33vh;
+    width: 100%;
 }
 
 .masthead-text {
-   background-color: #445261;
-   color: white;
-   position: relative;
+    background-color: var(--color-slate);
+    color: white;
+    position: relative;
 }
 
 .masthead-image {
-   position: relative;
-   overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .masthead-image:after {
-   content: "";
-   position: absolute;
-   top: 0;
-   right: 90%;
-   height: 100%;
-   width: 150%;
-   background: #445261;
-   -webkit-transform: skew(15deg);
-   -moz-transform: skew(15deg);
-   transform: skew(15deg);
-   z-index: 100;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 90%;
+    height: 100%;
+    width: 150%;
+    background: var(--color-slate);
+    -webkit-transform: skew(15deg);
+    -moz-transform: skew(15deg);
+    transform: skew(15deg);
+    z-index: 100;
 }
 
 .profile-image {
-   width: 75%;
+    width: 75%;
 }
 
 .post-link {
-   text-decoration: none;
-   color: #445261;
+    text-decoration: none;
+    color: var(--color-slate);
 }
 
 .post-link:hover,
 .page-link {
-   color: #e84610;
+    color: var(--color-blue);
 }
 
 .post-title {
-   margin-top: 10%;
-   margin-left: 5%;
+    margin-top: 10%;
+    margin-left: 5%;
 }
 
 .post-subtitle {
-   margin-left: 5%;
-   color: lightgray;
+    margin-left: 5%;
+    color: var(--color-tan-dark);
 }
 
 .btn-signup,
 .btn-edit {
-   background-color: #188181;
-   color: #fff;
+    background-color: var(--color-blue);
+    color: #fff;
 }
 
 .btn-signup:hover,
 .btn-signup:active {
-   background-color: #fff;
-   color: #23bbbb;
+    background-color: var(--color-tan-light);
+    color: var(--color-slate);
 }
 
 .link {
-   color: #23bbbb;
-   text-decoration: none;
+    color: var(--color-blue);
+    text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-   color: #445261;
-   text-decoration: underline;
+    color: var(--color-slate);
+    text-decoration: underline;
 }
 
 .btn-like {
-   color: #e84610;
-   border: none;
-   background: transparent;
+    color: var(--color-blue);
+    border: none;
+    background: transparent;
 }
 
 .btn-delete {
-   color: #fff;
-   background: #e84610;
+    color: #fff;
+    background: var(--color-slate);
 }
 
 .btn-like:hover,
 .btn-like:active {
-   color: #e84610;
-   background: transparent;
-   border: none;
+    color: var(--color-blue);
+    background: transparent;
+    border: none;
 }
 
 .faded {
-   color: rgb(172, 175, 175);
+    color: var(--color-tan-dark);
 }
 
 .approval {
-   color: rgb(222, 146, 168);
+    color: var(--color-blue);
 }
