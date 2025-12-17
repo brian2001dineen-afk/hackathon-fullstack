@@ -132,6 +132,15 @@ Technologies and Methodologies used:
 
 <details>
 
+- PostgreSQL, integrated through Django - for Database Management
+- HTML, CSS, JavaScript - for Frontend Development
+- Python, Django framework - for Backend Development
+- Cloudinary - for API
+- USING AI TOOLS, e.g. .......
+- Git & GitHub - for Version Control
+- Heroku - for deployment
+</details>
+
 ### Database Structure
 
 ### Future Features
