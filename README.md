@@ -97,6 +97,7 @@ Technologies and Methodologies used:
 
 ### Wireframes
 
+![Homepage wireframe](README_assets/wireframeV1.png)
 
 </details>
 
@@ -142,6 +143,8 @@ Technologies and Methodologies used:
 </details>
 
 ### Database Structure
+
+![ERD](README_assets/erdV1.png)
 
 ### Future Features
 
