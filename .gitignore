@@ -4,3 +4,4 @@ blog/fixtures/
 .venv/
 venv/
 __pycache__/
+/*.pyc
