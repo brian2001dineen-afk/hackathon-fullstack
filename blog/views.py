@@ -1,20 +1,20 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, UserPostForm
 
 # Create your views here.
 
 
 class PostList(generic.ListView):
-    queryset = Post.objects.filter(status=1)
+    queryset = Post.objects.filter(status=1, approved=True)
     template_name = "blog/index.html"
     paginate_by = 6
 
 
-def post_detail(request, slug):
+def post_detail(request, post_id):
     """Display an individual :model:`blog.Post`.
     **Context**
 
@@ -32,11 +32,17 @@ def post_detail(request, slug):
     :template:`blog/post_detail.html`
     """
 
-    # get published posts and match the slug of the requested post
-    queryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
-    comments = post.comments.all().order_by("-created_on")
-    comment_count = post.comments.filter(approved=True).count()
+    try:
+        post = Post.objects.get(id=post_id)
+        comments = post.comments.all().order_by("-created_on")
+        comment_count = post.comments.filter(approved=True).count()
+        comment_form = CommentForm()
+        # ...any other logic for existing posts...
+    except Post.DoesNotExist:
+        post = None
+        comments = []
+        comment_count = 0
+        comment_form = CommentForm()
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -58,7 +64,39 @@ def post_detail(request, slug):
     },)
 
 
-def comment_edit(request, slug, comment_id):
+def post_create(request):
+    """
+    Create an instance of :model:`post.UserPost`.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`post.UserPost`.
+    ``post_create_form``
+        An instance of :form:`post.UserPostForm`
+
+    **Template:**
+
+    :template:`post_create.html`
+    """
+    if request.method == 'POST':
+        post_create_form = UserPostForm(request.POST, request.FILES)
+        if post_create_form.is_valid():
+            post = post_create_form.save(commit=False)
+            post.author = request.user
+            post.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Post submitted and awaiting approval.')
+            return redirect('home')  # Change to your posts list view
+
+    post_create_form = UserPostForm()
+    return render(
+        request, 'blog/post_create.html',
+        {'post_create_form': post_create_form, },)
+
+
+def comment_edit(request, post_id, comment_id):
     """
     Displays an individual comment for edit.
 
@@ -74,7 +112,7 @@ def comment_edit(request, slug, comment_id):
 
     if request.method == "POST":
         queryset = Post.objects.filter(status=1)
-        post = get_object_or_404(queryset, slug=slug)
+        post = get_object_or_404(queryset, id=post_id)
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
         if comment_form.is_valid() and comment.author == request.user:
@@ -87,10 +125,10 @@ def comment_edit(request, slug, comment_id):
             messages.add_message(request, messages.ERROR,
                                  'Error updating comment!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_detail', args=[post_id]))
 
 
-def comment_delete(request, slug, comment_id):
+def comment_delete(request, post_id, comment_id):
     """
     Delete an individual comment.
 
@@ -111,4 +149,61 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR,
                              'You can only delete your own comments!')
 
-    return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+    return HttpResponseRedirect(reverse('post_detail', args=[post_id]))
+
+
+def post_edit(request, post_id):
+    """
+    Edit a post.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`post.UserPost`.
+
+    ``post_edit_form``
+        An instance of :form:`post.UserPostForm`
+
+    **Template:**
+
+    :template:`post_edit.html`
+    """
+    post = get_object_or_404(Post, id=post_id)
+    if request.method == 'POST':
+        post_edit_form = UserPostForm(
+            request.POST, request.FILES, instance=post)
+        if post_edit_form.is_valid():
+            post = post_edit_form.save(commit=False)
+            post.approved = False
+            post.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Post updated and awaiting approval.')
+            return redirect('home')
+    else:
+        post_edit_form = UserPostForm(instance=post)
+    return render(request, 'blog/post_edit.html', {
+        'post_edit_form': post_edit_form,
+        'userpost': post,
+    })
+
+
+def post_delete(request, post_id):
+    """
+    Delete a post.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`post.UserPost`.
+    """
+    post = get_object_or_404(Post, id=post_id)
+    if post.author == request.user:
+        post.delete()
+        messages.add_message(request, messages.SUCCESS, 'Post deleted.')
+
+    else:
+        messages.add_message(
+            request, messages.ERROR,
+            'You can only delete your own posts.')
+    return redirect('home')
