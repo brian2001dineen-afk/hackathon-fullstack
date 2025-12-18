@@ -3,7 +3,6 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Reflections](#reflections)
-  - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
     - [Purpose](#purpose)
     - [Key Highlights](#key-highlights)
