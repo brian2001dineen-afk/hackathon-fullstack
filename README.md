@@ -3,9 +3,8 @@
 **Table of Contents**
 
 - [Reflections](#reflections)
-  - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
-    - [User Experience (UX)](#user-experience-ux)
+  - [User Experience (UX)](#user-experience-ux)
     - [User Stories](#user-stories)
       - [Must-Have Features](#must-have-features)
       - [Should-Have Features](#should-have-features)
@@ -28,6 +27,8 @@
     - [Future Features](#future-features)
     - [Known Bugs](#known-bugs)
   - [Deployment Instructions](#deployment-instructions)
+  - [Credits](#credits)
+    - [Code](#code)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
