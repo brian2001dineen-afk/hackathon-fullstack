@@ -108,6 +108,181 @@ Technologies and Methodologies used:
 
 <details>
 
+
+## Features
+
+<details>
+
+Key features of the website include:
+
+
+🏠 Home Page (/)	
+- Responsive Bootstrap layout with grid system
+- Navbar with links: Home, Register, Login/Logout
+- Paginated record listings (title, author, featured image, excerpt)
+- Each record card links to its detail page
+- Featured image (via Cloudinary)
+- Placeholder image when no user-generated image provided
+- Footer with social media links (Facebook, Twitter, Instagram, YouTube)
+- Confirmation message
+
+Home Page - User logged in
+
+![home page when logged in](/static/images/features/home-page-when-logged-in.png)
+
+Home Page - User not logged in
+![home page when logged in](/static/images/features/home-page-when-not-logged-in.png)
+
+User has signed in confirmation message
+
+![user has signed in confirmation message](/static/images/features/confirmation_messages/user-has-signed-in-confirmation-message.png)
+
+
+📑 Paginated Listings (/?page=2, /?page=3, …)	
+
+- Continuation of record listings with pagination controls
+- Same layout and features as Home Page
+- Ensures scalability for large record collections
+
+Home Page - Page 2 - User logged in
+
+![home page - page 2 - when logged in](/static/images/features/home-page-page-2-when-logged-in.png)
+
+Home Page - page 2 - User not logged in
+
+![home page - page 2 - when not logged in](/static/images/features/home-page-page-2-when-not-logged-in.png)
+
+
+🎼 Record Detail Page (//)	
+
+- Full record information: title, artist, genre, year, record label, content
+- Author attribution (user who created the record)
+- Reviews section: reviewer name, body, timestamp
+- Review form (visible to logged‑in users)
+- Logged in authenticated users can add, edit and delete their own reviews
+- Site users can view approved reviews 
+- Review moderation: reviews require admin approval before appearing
+- Confirmation messages
+
+Record Detail page - User logged in
+
+![record detail page when logged in](/static/images/features/record-detail-page-when-logged-in.png)
+
+Record Detail page - User not logged in
+
+![record detail page when not logged in](/static/images/features/record-detail-page-when-not-logged-in.png)
+
+Record Detail page - review added confirmation
+
+![review added confirmation message](/static/images/features/confirmation_messages/review-added-confirmation.png)
+
+Record Detail page - review updated confirmation
+
+![review updated confirmation message](/static/images/features/confirmation_messages/review-updated-confirmation.png)
+
+Record Detail page  - review deleted confirmation
+
+![review deleted confirmation message](/static/images/features/confirmation_messages/review-deleted-confirmation.png)
+
+
+🔐 Register Page (/accounts/signup/)
+
+- User registration form with Bootstrap styling
+- Validation messages for incorrect or missing input
+- Creates new user accounts stored in Postgres
+- Confirmation message
+
+Register page
+
+![register page](/static/images/features/register-page.png)
+
+User has registered and signed in confirmation message
+
+![user has registered and signed in confirmation message](/static/images/features/confirmation_messages/user-has-registered-and-signed-in-confirmation.png)
+
+
+🔑 Login Page (/accounts/login/)	
+
+
+- Login form with username and password fields
+- Error messages for invalid credentials
+- Redirects to Home Page after successful login
+- Confirmation message
+
+Login page
+
+![login page](static/images/features/login-page.png)
+
+User has signed in confirmation message
+
+![user has signed in confirmation message](/static/images/features/confirmation_messages/user-has-signed-in-confirmation-message.png)
+
+
+🚪 Logout Page (/accounts/logout/)	
+
+- Logs out the user
+- Navbar updates to show “You are not logged in.”
+- Confirmation message
+
+
+Logout page
+
+![logout page](/static/images/features/logout-page.png)
+
+User has signed out confirmation message
+
+![user has signed out confirmation message](/static/images/features/confirmation_messages/user-has-signed-out-confirmation.png)
+
+
+⚙️ Admin Dashboard (/admin/)	
+
+- Authentication required (staff/superuser only)
+- Manage Record model: create, edit, delete records; set status (Draft/Published)
+- Manage Review model: approve/disapprove reviews, edit/delete reviews
+- Manage User model: assign staff/superuser permissions
+- Built‑in search and filters
+- Full CRUD operations for all models
+- Confirmation messages
+
+Authenticated superuser logged in
+
+![admin dashboard - authenticated superuser logged in](/static/images/features/admin-page-site-admin-user-logged-in.png)
+
+Admin page access is restricted
+
+![admin page access restricted](static/images/features/admin-page-access-is-restricted.png)
+
+Admin page approve and disapprove reviews by toggling Approved checkbox as appropriate and selecting 'Save' button
+
+![review approved checkbox on admin page](/static/images/features/approve-and-unapprove-reviews-in-admin.png)
+
+Change record status on Admin page using Status dropdown and selecting Save button
+
+![change record status on admin page](/static/images/features/draft-and-publish-records-in-admin-page-using-status-dropdown-and-selecting-save-button.png)
+
+
+Record created confirmation message on Admin
+
+![record added confirmation](/static/images/features/confirmation_messages/record-added-confirmation.png)
+
+Record updated confirmation message on Admin
+
+![record updated confirmation](/static/images/features/confirmation_messages/record-changed-confrmation.png)
+
+Record deleted confirmation message on Admin
+
+![record deleted confirmation](/static/images/features/confirmation_messages/record-deleted-confirmation.png)
+
+
+✨ Key Technical Features include:
+
+- Bootstrap integration for responsive design
+- Cloudinary for image hosting
+- Postgres database for records, reviews, and users
+- Django models (Record, Review) with relationships
+- Pagination for record listings
+
+</details>
 ### Landing Page
 
 ### Navigation & User Experience
@@ -125,6 +300,90 @@ Technologies and Methodologies used:
 <details>
 
 ### Manual Testing
+### Testing
+
+<details>
+
+Manual Testing was carried out during the Development process and again after Deployments. Please see below Manual Testing Report which highlights key functionality testing.
+
+# 📄 Manual Testing Report – Record Reviews Project
+
+---
+
+## 📌 Cover Page
+
+**Project Title:** Record  Reviews – Capstone Project  
+**Author:** Denise Desmond 
+**Date of Testing:** December 2025  
+**Purpose of Testing:**  
+To validate that all features of the RecordReviews project function correctly across multiple devices (Desktop and Android). Testing includes navigation, CRUD operations for Records and Reviews, authentication, permissions, access control, notifications, and non‑functional requirements (validation, responsiveness, accessibility).  
+
+**Devices Tested:**  
+- Desktop (Windows)  
+- Android (Mobile)  
+
+**Overall Result:**  
+✅ All features tested successfully. Expected and actual results matched across devices.  
+
+---
+
+# 🧪 Consolidated Manual Testing Matrix
+
+| **Page/Area** | **Feature** | **Test Performed** | **Expected Result** | **Actual Result** | **Devices Tested** | **Status** |
+|---------------|-------------|--------------------|---------------------|-------------------|--------------------|------------|
+| Home (`/`) | Navbar links | Click Home, Register, Login | Correct page loads | Correct page loads | Desktop, Android | ✅ Pass |
+| Home (`/`) | Record listings | Verify records display with title, author, excerpt, image | Records visible with correct info | Records visible | Desktop, Android | ✅ Pass |
+| Home (`/`) | Pagination | Click “Next” page | Loads next set of records | Records load on Page 2 | Desktop, Android | ✅ Pass |
+| Home (`/`) | Footer links | Click social media icons | Redirects to external social sites | Redirects correctly | Desktop, Android | ✅ Pass |
+| Paginated Listings (`/?page=2`) | Pagination continuity | Navigate between pages | Records continue to display correctly | Records display correctly | Desktop, Android | ✅ Pass |
+| Record Detail (`/<id>/`) | Record info | Open record detail | Full record info displayed | Info displayed correctly | Desktop, Android | ✅ Pass |
+| Record Detail (`/<id>/`) | Reviews section | View approved reviews | Reviews show reviewer, body, timestamp | Reviews display correctly | Desktop, Android | ✅ Pass |
+| Record Detail (`/<id>/`) | Review form (signed in) | Submit review | Review saved, pending admin approval | Review saved, hidden until approved | Desktop, Android | ✅ Pass |
+| Record Detail (`/<id>/`) | Review visibility (not signed in) | Visit record detail page while logged out | Approved reviews are visible | Reviews visible | Desktop, Android | ✅ Pass |
+| Record Detail (`/<id>/`) | Review form (not signed in) | Attempt to submit review while logged out | Form not available / redirect to login | Form hidden, prompt to log in | Desktop, Android | ✅ Pass |
+| Record Detail (`/<id>/`) | Review ownership – Add/Edit/Delete | User manages own review | Only own reviews editable/deletable | Works as expected | Desktop, Android | ✅ Pass |
+| Record Detail (`/<id>/`) | Review ownership – Other users | Attempt to edit/delete another’s review | Permission denied | Options not visible | Desktop, Android | ✅ Pass |
+| Register (`/accounts/signup/`) | Registration form | Submit valid details | Account created | Account created | Desktop, Android | ✅ Pass |
+| Register (`/accounts/signup/`) | Validation | Submit invalid/missing details | Error messages displayed | Errors displayed | Desktop, Android | ✅ Pass |
+| Login (`/accounts/login/`) | Login form | Enter valid credentials | User logged in, redirected to Home | Works as expected | Desktop, Android | ✅ Pass |
+| Login (`/accounts/login/`) | Validation | Enter invalid credentials | Error message shown | Error shown | Desktop, Android | ✅ Pass |
+| **Login (`/accounts/login/`)** | Login notification | Successful login | Confirmation message displayed | Message displayed | Desktop, Android | ✅ Pass |
+| Logout (`/accounts/logout/`) | Logout action | Click logout | User logged out, confirmation shown | Works as expected | Desktop, Android | ✅ Pass |
+| **Logout (`/accounts/logout/`)** | Logout notification | Successful logout | Confirmation message displayed | Message displayed | Desktop, Android | ✅ Pass |
+| **Global (Navbar)** | Logged‑in state indicator | Check navbar when logged in/out | Shows “You are logged in” or “You are not logged in” | Correct state shown | Desktop, Android | ✅ Pass |
+| **Templates** | HTML validation | Run templates through W3C validator | No validation errors | No errors found | Desktop | ✅ Pass |
+| **CSS** | CSS validation | Run stylesheets through Jigsaw validator | No validation errors | No errors found | Desktop | ✅ Pass |
+| **Global (Responsive Design)** | Responsiveness | Resize browser / test on Android | Layout adapts to screen width | Responsive across devices | Desktop, Android | ✅ Pass |
+| **Global (Accessibility)** | Accessibility & performance | Test with Lighthouse/Wave | Meets minimum accessibility/performance | Requirements met | Desktop | ✅ Pass |
+| **Records (Frontend Form)** | Record – Create | Logged‑in user submits record form | Record created and saved | Record created successfully | Desktop, Android | ✅ Pass |
+| **Records (Frontend Form)** | Record – Create notification | After record creation | Confirmation message displayed | Message displayed | Desktop, Android | ✅ Pass |
+| **Records (Frontend Form)** | Record – Edit | Logged‑in user edits own record | Changes saved and updated | Works as expected | Desktop, Android | ✅ Pass |
+| **Records (Frontend Form)** | Record – Edit notification | After record edit | Confirmation message displayed | Message displayed | Desktop, Android | ✅ Pass |
+| **Records (Frontend Form)** | Record – Delete | Logged‑in user deletes own record | Record removed | Works as expected | Desktop, Android | ✅ Pass |
+| **Records (Frontend Form)** | Record – Delete notification | After record deletion | Confirmation message displayed | Message displayed | Desktop, Android | ✅ Pass |
+| **Records (Frontend Form)** | Record manipulation (logged‑out) | Attempt to create/edit/delete while logged out | Access denied | Access denied | Desktop, Android | ✅ Pass |
+| **Records (Restricted Access)** | Authorised access | Attempt to access restricted records/information | Only authorised users can access | Access correctly restricted | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Authentication | Attempt login as non-admin | Access denied | Access denied | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Record – Create | Add new record via admin | Record saved and visible on site | Record created successfully | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Record – Read | View record list in admin | Records display with correct info | Records display correctly | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Record – Update | Edit record details | Changes saved and reflected on site | Changes applied correctly | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Record – Delete | Delete a record | Record removed from site | Record deleted successfully | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Review – Create | Add new review via admin | Review saved and linked to record | Review created successfully | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Review – Read | View review list in admin | Reviews display with correct info | Reviews display correctly | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Review – Update | Edit review details | Changes saved and reflected on site | Changes applied correctly | Desktop, Android | ✅ Pass |
+| Admin (`/admin/`) | Review – Delete | Delete a review | Review removed from site | Review deleted successfully | Desktop, Android | ✅ Pass |
+
+---
+
+# ✅ Summary
+
+- All **functional tests** (login state, registration, authentication, CRUD for records and reviews, notifications, permissions) passed.  
+- All **non‑functional tests** (HTML validation, CSS validation, responsiveness, accessibility & performance) passed.  
+- Tested thoroughly on **Desktop (Windows)** and **Android mobile devices**.  
+- **Status: Pass** for all features.
+</details>
+</details>
+
 
 ### Browser Testing
 
