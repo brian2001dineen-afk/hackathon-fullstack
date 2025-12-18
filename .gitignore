@@ -3,4 +3,7 @@ env_nu/
 blog/fixtures/
 .venv/
 venv/
-/__pycache__/*
+/__pycache__/*.pyc
+*.pyc
+*.cpython-314
+*.cpython-314.pyc
