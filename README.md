@@ -137,6 +137,14 @@ User has signed in confirmation message
 ![user has signed in confirmation message](/static/images/features/confirmation_messages/user-has-signed-in-confirmation-message.png)
 
 
+Post Detail
+
+![Post Detail](README_assets/PostDetail.png)
+
+Create Post
+
+![Create Post](README_assets/CreatePost.png)
+
 📑 Paginated Listings (/?page=2, /?page=3, …)	
 
 - Continuation of record listings with pagination controls
