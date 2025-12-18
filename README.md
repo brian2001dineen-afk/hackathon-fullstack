@@ -97,7 +97,9 @@ Technologies and Methodologies used:
 
 ### Wireframes
 
-![Homepage wireframe](README_assets/wireframeV1.png)
+![Homepage Wireframe](README_assets/wireframeV1.png)
+
+![Mobile Homepage Wireframe](README_assets/wireframeMobileV1.png)
 
 </details>
 
