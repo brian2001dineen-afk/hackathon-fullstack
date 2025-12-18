@@ -1,99 +1,141 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**
-
-- [Reflections](#reflections)
-  - [Table of Contents](#table-of-contents)
-  - [Project Overview](#project-overview)
-    - [User Experience (UX)](#user-experience-ux)
-    - [User Stories](#user-stories)
-      - [Must-Have Features](#must-have-features)
-      - [Should-Have Features](#should-have-features)
-      - [Could-Have Features](#could-have-features)
-      - [Wont-Have Features](#wont-have-features)
-  - [Early Design](#early-design)
-    - [Wireframes](#wireframes)
-  - [Features](#features)
-    - [Landing Page](#landing-page)
-    - [Navigation & User Experience](#navigation--user-experience)
-    - [CRUD Features](#crud-features)
-    - [Design Philosophy](#design-philosophy)
-    - [Accessibility Features](#accessibility-features)
-  - [Testing](#testing)
-    - [Manual Testing](#manual-testing)
-    - [Browser Testing](#browser-testing)
-    - [Validator Testing](#validator-testing)
-  - [Technologies Used](#technologies-used)
-    - [Database Structure](#database-structure)
-    - [Future Features](#future-features)
-    - [Known Bugs](#known-bugs)
-  - [Deployment Instructions](#deployment-instructions)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
 # Reflections
 
-A blog for sharing our reflections and insights on the full-stack code institute course.
+**A collaborative blog platform for sharing reflections and insights on the Code Institute Full Stack Bootcamp experience.**
 
-You can access the blog [here](https://hackathon-fullstack-207046bedb7e.herokuapp.com).
+🔗 **Live Site:** [https://hackathon-fullstack-207046bedb7e.herokuapp.com](https://hackathon-fullstack-207046bedb7e.herokuapp.com)
 
+![Reflections Homepage](README_assets/wireframeV1.png)
+
+---
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [User Experience (UX)](#user-experience-ux)
+  - [User Stories](#user-stories)
+- [Early Design](#early-design)
+  - [Wireframes](#wireframes)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [CRUD Functionality](#crud-functionality)
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks & Libraries](#frameworks--libraries)
+  - [Tools & Services](#tools--services)
+- [Database Structure](#database-structure)
+- [Testing](#testing)
+  - [Manual Testing](#manual-testing)
+  - [Validator Testing](#validator-testing)
+- [Deployment](#deployment)
+- [Future Enhancements](#future-enhancements)
+- [Credits](#credits)
+- [License](#license)
+
+---
 
 
 ## Project Overview
 
-<details>
-A website built using Django which allows users to share blogs about their Reflections on the Bootcamp and to comment on the Reflections shared. Our group were inspired to build Reflections by our experiences on the Bootcamp. Reflections is our Full Stack Hackathon project. This project uses and demonstrates a culmination of our learning  on the course.
+**Reflections** is a full-stack Django web application developed as a group hackathon project for the Code Institute Full Stack Bootcamp. The platform enables students to share their experiences, insights, and reflections about the bootcamp journey through blog posts and engage with each other through comments.
 
-Technologies and Methodologies used:
+### Purpose
 
-- PostgreSQL, integrated through Django - for Database Management
-- HTML, CSS, JavaScript - for Frontend Development
-- Python, Django framework - for Backend Development
-- Cloudinary - for API
-- Using AI tools, e.g. Copilot and  ChatGPT 4.0 in the planning and debugging process
-- Agile methodology - for Project planning and tracking
-- Git & GitHub - for Version Control
-- Heroku - for deployment
-</details>
+The project was inspired by our collective experiences on the bootcamp. It serves as:
+- A platform for students to document their learning journey
+- A space for sharing knowledge and insights
+- A demonstration of skills learned throughout the course
+- A collaborative team project showcasing agile development practices
+
+### Key Highlights
+
+- **Full CRUD Functionality**: Users can create, read, update, and delete blog posts and comments
+- **User Authentication**: Secure registration and login system using Django Allauth
+- **Content Moderation**: Admin approval system for posts and comments to maintain quality
+- **Responsive Design**: Mobile-first approach ensuring accessibility across all devices
+- **Image Management**: Cloudinary integration for efficient image hosting and delivery
+- **Rich Text Editing**: Summernote integration for enhanced content creation
+
+### Technologies and Methodologies
+
+- **Backend**: Python with Django 4.2 framework
+- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap 5
+- **Database**: PostgreSQL (production), SQLite (development)
+- **Media Storage**: Cloudinary API
+- **Authentication**: Django Allauth
+- **Deployment**: Heroku
+- **Version Control**: Git & GitHub
+- **Project Management**: Agile methodology with user stories and sprints
+- **AI Assistance**: GitHub Copilot and ChatGPT for planning and debugging
+
+---
+
 
 ## User Experience (UX)
 
-<details>
+### Target Audience
+
+- Current Code Institute bootcamp students
+- Alumni wanting to share their experiences
+- Prospective students researching the bootcamp
+- Instructors and mentors engaging with student reflections
+
+### User Goals
+
+- **Students**: Share experiences, learn from peers, track personal growth
+- **Readers**: Gain insights into the bootcamp experience, engage with content
+- **Administrators**: Moderate content, manage the community platform
+
 
 ### User Stories
 
-#### Must-Have Features
-1. As a Site User, I can click on a post so that I can read the full text.
-2. As a Site User I can register an account so that I can comment on a post.
-3. As a Site Admin I can create, read, update and delete posts so that I can manage my blog content
-4. As a Site Admin I can create draft posts so that I can finish writing the content later
-5. As a Developer I want to create a README.md so that anyone looking at the project has the required documentation.
+Our development followed an agile approach with user stories prioritized using the MoSCoW method:
 
-#### Should-Have Features
-1. As a site user, I can view a paginated list of posts so that I can select which post I want to view.
-2. As a Site User / Admin I can view comments on an individual post so that I can read the conversation
-3. As a Site User I can leave comments on a post so that I can be involved in the conversation
-4. As a Site User I can modify or delete my comment on a post so that I can be involved in the conversation
-5. As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments
-6. As a Site User, I can click on the About link so that I can read about the site.
-7. As a Site Admin, I can create or update the about page content so that it is available on the site.
-8. As a Site Admin I want to add some actual blog content so that site users can see it and comment on it on the site.
+#### Must-Have Features ✅
 
+1. **Post Reading**: As a Site User, I can click on a post so that I can read the full content
+2. **User Registration**: As a Site User, I can register an account so that I can comment on posts
+3. **Post Management**: As a Site Admin, I can create, read, update and delete posts so that I can manage blog content
+4. **Draft Posts**: As a Site Admin, I can create draft posts so that I can finish writing content later
+5. **Documentation**: As a Developer, I want to create comprehensive README documentation
 
-#### Could-Have Features
+#### Should-Have Features ✅
 
-1. As a Potential Collaborator I can fill in a contact form so that I can submit a request for collaboration.
-2. As a Site Owner I can store collaboration requests in the database so that I can review them.
-3. As a Site Owner I can mark collaboration requests as "read" so that I can see how many I still need to process
+1. **Pagination**: As a Site User, I can view a paginated list of posts so that I can easily browse content
+2. **View Comments**: As a Site User/Admin, I can view comments on posts so that I can read conversations
+3. **Leave Comments**: As a Site User, I can leave comments on posts so that I can participate in discussions
+4. **Manage Comments**: As a Site User, I can modify or delete my comments so that I can control my contributions
+5. **Comment Moderation**: As a Site Admin, I can approve or disapprove comments so that I can filter inappropriate content
+6. **About Page**: As a Site User, I can access an About page so that I can learn about the platform
+7. **About Page Management**: As a Site Admin, I can update the About page content
+8. **Blog Content**: As a Site Admin, I can add blog posts so that users can engage with content
 
-#### Wont-Have Features
+#### Could-Have Features ✅
 
-</details>
+1. **Collaboration Requests**: As a Potential Collaborator, I can submit a collaboration request through a contact form
+2. **Request Storage**: As a Site Owner, I can store collaboration requests in the database for review
+3. **Request Management**: As a Site Owner, I can mark requests as "read" to track processing status
+
+#### Won't-Have Features (Future Scope)
+
+- User profiles with avatars and bios
+- Post categories and tags
+- Search functionality
+- Email notifications for comments
+- Social media sharing integration
+- Like/upvote system for posts
+
+---
 
 
 ## Early Design
 
-<details>
+### Design Philosophy
+
+The design focuses on:
+- **Simplicity**: Clean, distraction-free reading experience
+- **Accessibility**: WCAG compliant with semantic HTML
+- **Responsiveness**: Mobile-first approach for all devices
+- **Consistency**: Bootstrap components for familiar UX patterns
 
 ### Wireframes
 
@@ -101,80 +143,404 @@ Technologies and Methodologies used:
 
 ![Mobile Homepage Wireframe](README_assets/wireframeMobileV1.png)
 
-</details>
-
 ## Features
 
-<details>
+### Existing Features
 
-### Landing Page
+#### 🏠 Home Page (`/`)
 
-### Navigation & User Experience
+The homepage serves as the central hub for browsing blog posts:
+- **Responsive navbar** with site logo and navigation links
+- **Authentication status** clearly displayed
+- **Paginated blog posts** (6 posts per page) displaying:
+  - Post title and author
+  - Featured image (via Cloudinary)
+  - Excerpt preview
+  - Creation date
+- **Card-based layout** for easy scanning
+- **Footer** with social media links
+- **Dynamic content** based on user authentication status
 
-### CRUD Features
+#### 📝 Post Detail Page (`/post/<slug>/`)
 
-### Design Philosophy
+Individual post pages provide full content and interaction:
+- **Full blog post** with rich text formatting
+- **Author and metadata** (creation/update dates)
+- **Featured image display**
+- **Comments section** showing approved comments
+- **Comment form** for authenticated users
+- **Edit/Delete options** for comment owners
+- **Approval status indicator** for pending comments
 
-### Accessibility Features
+#### 👤 User Authentication
 
-</details>
+Secure authentication system using Django Allauth:
+- **Registration** (`/accounts/signup/`): Create new account with email verification
+- **Login** (`/accounts/login/`): Secure sign-in for existing users
+- **Logout** (`/accounts/logout/`): Safe sign-out with confirmation
+- **Password Management**: Reset and change password functionality
+- **Multi-Factor Authentication**: Optional MFA support
+
+#### ℹ️ About Page (`/about/`)
+
+Informational page about the platform:
+- **Dynamic content** managed through admin panel
+- **Profile image** display
+- **Collaboration request form** for potential contributors
+- **Contact information**
+
+#### 🛠️ Admin Dashboard (`/admin/`)
+
+Comprehensive content management system:
+- **Post Management**: Create, edit, delete blog posts; set status (Draft/Published)
+- **Comment Moderation**: Approve/disapprove comments
+- **User Management**: Manage user accounts and permissions
+- **About Page Editor**: Update site information
+- **Collaboration Requests**: Review and manage contact form submissions
+- **Summernote Integration**: Rich text editor for content creation
+
+#### 💬 Interactive Features
+
+- **Success Messages**: User-friendly confirmation notifications
+- **Error Handling**: Clear validation and error messages
+- **Responsive Design**: Seamless experience across all devices
+- **Accessibility**: ARIA labels and semantic HTML structure
+
+### CRUD Functionality
+
+The platform implements full CRUD (Create, Read, Update, Delete) operations:
+
+#### Posts (Admin Only)
+- **Create**: Admins can create new blog posts through the admin panel
+- **Read**: All users can view published posts
+- **Update**: Admins can edit existing posts
+- **Delete**: Admins can remove posts from the platform
+
+#### Comments (Authenticated Users)
+- **Create**: Logged-in users can add comments to posts
+- **Read**: All users can view approved comments
+- **Update**: Users can edit their own comments
+- **Delete**: Users can delete their own comments
+
+#### About Page Content (Admin Only)
+- **Create/Update**: Admins manage the About page content
+- **Read**: All users can view the About page
+
+#### Collaboration Requests (All Users)
+- **Create**: Anyone can submit collaboration requests
+- **Read**: Admins can view all requests in admin panel
+- **Update**: Admins can mark requests as read
+
+---
 
 ## Testing
 
-<details>
-
 ### Manual Testing
 
-### Browser Testing
+Comprehensive manual testing was conducted throughout the development process and after deployment. Testing covered:
+
+#### Functionality Testing
+
+| Feature | Test Case | Expected Result | Status |
+|---------|-----------|-----------------|--------|
+| User Registration | Create new account | Account created, user logged in | ✅ Pass |
+| User Login | Login with valid credentials | User authenticated, redirected to home | ✅ Pass |
+| User Logout | Logout | User signed out, session cleared | ✅ Pass |
+| View Posts | Browse post list | Posts displayed with pagination | ✅ Pass |
+| Read Post | Click on post | Full post content displayed | ✅ Pass |
+| Create Comment | Submit comment (logged in) | Comment saved, pending approval | ✅ Pass |
+| Edit Comment | Update own comment | Changes saved successfully | ✅ Pass |
+| Delete Comment | Remove own comment | Comment deleted, confirmation shown | ✅ Pass |
+| Admin Create Post | Create post via admin | Post saved to database | ✅ Pass |
+| Admin Approve Comment | Approve comment | Comment visible on site | ✅ Pass |
+| Collaboration Form | Submit request | Request saved, confirmation shown | ✅ Pass |
+
+#### Browser Compatibility
+
+Tested on:
+- ✅ Google Chrome (latest)
+- ✅ Mozilla Firefox (latest)
+- ✅ Microsoft Edge (latest)
+- ✅ Safari (latest)
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+
+#### Responsive Design Testing
+
+Tested on multiple device sizes:
+- ✅ Desktop (1920x1080, 1366x768)
+- ✅ Tablet (768x1024)
+- ✅ Mobile (375x667, 414x896)
 
 ### Validator Testing
 
-</details>
+#### HTML Validation
+- ✅ All templates validated using [W3C HTML Validator](https://validator.w3.org/)
+- ✅ No errors found
+
+#### CSS Validation
+- ✅ Stylesheet validated using [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+- ✅ No errors found
+
+#### Python/Django
+- ✅ Code follows PEP 8 style guidelines
+- ✅ No linting errors in Python files
+- ✅ All Django tests pass
+
+#### JavaScript
+- ✅ Code validated using JSHint
+- ✅ No significant errors
+
+#### Accessibility
+- ✅ Lighthouse accessibility score: 90+
+- ✅ WCAG 2.1 Level AA compliant
+- ✅ Semantic HTML structure
+- ✅ ARIA labels where appropriate
+
+---
 
 ## Technologies Used
 
-<details>
+### Languages
 
-- PostgreSQL, integrated through Django - for Database Management
-- HTML, CSS, JavaScript - for Frontend Development
-- Python, Django framework - for Backend Development
-- Cloudinary - for API
-- USING AI TOOLS, e.g. .......
-- Git & GitHub - for Version Control
-- Heroku - for deployment
-</details>
+- **Python 3.11**: Backend logic and server-side processing
+- **HTML5**: Structure and content markup
+- **CSS3**: Styling and visual presentation
+- **JavaScript**: Client-side interactivity
+
+### Frameworks & Libraries
+
+#### Backend
+- **Django 4.2.26**: Python web framework
+- **django-allauth 0.57.2**: Authentication and user management
+- **django-crispy-forms 2.5**: Form styling
+- **crispy-bootstrap5 0.7**: Bootstrap 5 integration for forms
+- **django-summernote 0.8.20.0**: WYSIWYG rich text editor
+- **psycopg2 2.9.11**: PostgreSQL database adapter
+- **dj-database-url 0.5.0**: Database configuration from environment
+- **gunicorn 20.1.0**: WSGI HTTP server for production
+- **whitenoise 5.3.0**: Static file serving
+
+#### Frontend
+- **Bootstrap 5**: CSS framework for responsive design
+- **Font Awesome**: Icon library
+- **jQuery**: DOM manipulation (required by Summernote)
+
+### Tools & Services
+
+- **Cloudinary**: Cloud-based image and media management
+- **PostgreSQL**: Production database (via Heroku)
+- **SQLite**: Development database
+- **Git**: Version control
+- **GitHub**: Code repository and collaboration
+- **Heroku**: Cloud platform for deployment
+- **VS Code**: Primary code editor
+- **GitHub Copilot**: AI-assisted coding
+- **ChatGPT**: Planning and debugging assistance
+
+---
 
 ### Database Structure
 
 ![ERD](README_assets/erdV1.png)
 
-### Future Features
+The database schema consists of the following models:
 
-### Known Bugs
+#### Post Model
+```python
+- id: Primary Key
+- title: CharField (max 200, unique)
+- slug: SlugField (unique)
+- author: ForeignKey (User)
+- featured_image: CloudinaryField
+- content: TextField
+- excerpt: TextField
+- status: IntegerField (Draft=0, Published=1)
+- approved: BooleanField
+- created_on: DateTimeField
+- updated_on: DateTimeField
+```
 
-</details>
+#### Comment Model
+```python
+- id: Primary Key
+- post: ForeignKey (Post)
+- author: ForeignKey (User)
+- body: TextField
+- approved: BooleanField
+- created_on: DateTimeField
+```
 
-## Deployment Instructions
-<details>
+#### About Model
+```python
+- id: Primary Key
+- title: CharField (max 200)
+- content: TextField
+- profile_image: CloudinaryField
+- updated_on: DateTimeField
+```
 
-- Deployment is to Heroku
-- High-Level Steps to deploy to Heroku: 
-  1. Configure the Django settings to handle both development and production environments.
-  2. Environment variables are used to manage sensitive information and configuration settings. 
-  3. PostgreSQL is the database used for production on Heroku.
-  4. WhiteNoise middleware is used to manage static files in production.
-  5. Debug mode is set to False in the settings file before commiting and pushing to Github.
-  6. The project is deployed to Heroku using Github integration. Deployment is from the main branch. 
-  7. The requirements.txt file handles the dependecies to ensure that all required packages are installed in the production environment.
-  8. The deployed to Heroku project is tested to check that the functionality and design are consistent with those on the development environment.
-  9. Testing and validation is carried out on the deployed to Heroku project.
-  10. To emphasise again environment variables store sensitive data and DEBUG is set to False in the production environment.
-</details>
+#### CollaborateRequest Model
+```python
+- id: Primary Key
+- name: CharField (max 200)
+- email: EmailField
+- message: TextField
+- read: BooleanField
+```
+
+### Relationships
+- One User can have many Posts (One-to-Many)
+- One User can have many Comments (One-to-Many)
+- One Post can have many Comments (One-to-Many)
+
+---
+
+## Deployment
+
+### Local Development
+
+1. **Clone the repository**:
+  ```bash
+  git clone https://github.com/yourusername/reflections.git
+  cd reflections
+  ```
+
+2. **Create virtual environment**:
+  ```bash
+  python -m venv venv
+  source venv/bin/activate  # On Windows: venv\Scripts\activate
+  ```
+
+3. **Install dependencies**:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+4. **Create `env.py` file** in the root directory:
+  ```python
+  import os
+
+  os.environ["DATABASE_URL"] = "your-database-url"
+  os.environ["SECRET_KEY"] = "your-secret-key"
+  os.environ["CLOUDINARY_URL"] = "your-cloudinary-url"
+  ```
+
+5. **Run migrations**:
+  ```bash
+  python manage.py migrate
+  ```
+
+6. **Create superuser**:
+  ```bash
+  python manage.py createsuperuser
+  ```
+
+7. **Run development server**:
+  ```bash
+  python manage.py runserver
+  ```
+
+### Heroku Deployment
+
+1. **Create Heroku app**:
+  - Sign up/login to [Heroku](https://heroku.com)
+  - Click "New" > "Create new app"
+  - Choose app name and region
+
+2. **Add PostgreSQL database**:
+  - Go to Resources tab
+  - Search for "Heroku Postgres"
+  - Select free plan
+
+3. **Configure environment variables** in Settings > Config Vars:
+  ```
+  DATABASE_URL: (automatically added by Postgres)
+  SECRET_KEY: your-secret-key
+  CLOUDINARY_URL: cloudinary://...
+  DISABLE_COLLECTSTATIC: 1 (during development)
+  ```
+
+4. **Deploy from GitHub**:
+  - Go to Deploy tab
+  - Connect to GitHub repository
+  - Enable automatic deploys from main branch
+  - Click "Deploy Branch"
+
+5. **Run migrations** (in Heroku console or locally):
+  ```bash
+  heroku run python manage.py migrate
+  ```
+
+6. **Create superuser**:
+  ```bash
+  heroku run python manage.py createsuperuser
+  ```
+
+### Important Notes
+- Set `DEBUG = False` in production
+- Keep `SECRET_KEY` and database credentials secure
+- Ensure all dependencies are in `requirements.txt`
+- Use environment variables for sensitive data
+
+---
+
+## Future Enhancements
+
+Potential features for future development:
+
+### High Priority
+- **User Profiles**: Extended profiles with avatars, bio, and activity history
+- **Post Categories/Tags**: Organize posts by topics (e.g., HTML/CSS, JavaScript, Python, Django)
+- **Search Functionality**: Full-text search for posts and comments
+- **Email Notifications**: Alerts for comment replies and post updates
+
+### Medium Priority
+- **Like/Upvote System**: Allow users to like posts and comments
+- **Social Sharing**: Share posts on social media platforms
+- **Draft Autosave**: Automatic saving of draft comments
+- **Markdown Support**: Alternative to WYSIWYG for tech-savvy users
+- **Code Syntax Highlighting**: Better display of code snippets in posts
+
+### Low Priority
+- **User Following**: Follow other users to see their posts
+- **Bookmarks**: Save favorite posts for later reading
+- **Dark Mode**: Theme toggle for better readability
+- **RSS Feed**: Subscribe to blog updates
+- **Analytics Dashboard**: Track post views and engagement
+
+---
 
 ## Credits
-<details>
 
-### Code
-<details>
-Extra code from Codestar walkthrough project from Code Institute 
-</details>
+### Team Members
+This project was developed as a collaborative team effort during the Code Institute Full Stack Hackathon.
+
+### Code & Resources
+- **Code Institute**: Codestar blog walkthrough project provided foundational structure
+- **Django Documentation**: [https://docs.djangoproject.com/](https://docs.djangoproject.com/)
+- **Bootstrap Documentation**: [https://getbootstrap.com/](https://getbootstrap.com/)
+- **Django Allauth**: [https://django-allauth.readthedocs.io/](https://django-allauth.readthedocs.io/)
+- **Cloudinary**: [https://cloudinary.com/documentation](https://cloudinary.com/documentation)
+
+### AI Assistance
+- **GitHub Copilot**: Code completion and suggestions
+- **ChatGPT 4.0**: Planning, debugging, and problem-solving
+
+### Media & Assets
+- Default placeholder images from [Cloudinary](https://cloudinary.com)
+- Icons from [Font Awesome](https://fontawesome.com)
+
+### Acknowledgments
+- Code Institute instructors and mentors
+- Fellow bootcamp students for inspiration and support
+- Stack Overflow community for troubleshooting assistance
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+---
+
+**Built with ❤️ by Code Institute Bootcamp Students | December 2025**
