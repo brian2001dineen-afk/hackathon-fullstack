@@ -5,3 +5,5 @@ blog/fixtures/
 venv/
 /__pycache__/*.pyc
 *.pyc
+*.cpython-314
+*.cpython-314.pyc
