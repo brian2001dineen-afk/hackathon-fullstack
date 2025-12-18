@@ -3,9 +3,8 @@
 **Table of Contents**
 
 - [Reflections](#reflections)
-  - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
-    - [User Experience (UX)](#user-experience-ux)
+  - [User Experience (UX)](#user-experience-ux)
     - [User Stories](#user-stories)
       - [Must-Have Features](#must-have-features)
       - [Should-Have Features](#should-have-features)
@@ -14,13 +13,18 @@
   - [Early Design](#early-design)
     - [Wireframes](#wireframes)
   - [Features](#features)
-    - [Landing Page](#landing-page)
+  - [Features](#features-1)
     - [Navigation & User Experience](#navigation--user-experience)
     - [CRUD Features](#crud-features)
     - [Design Philosophy](#design-philosophy)
     - [Accessibility Features](#accessibility-features)
   - [Testing](#testing)
     - [Manual Testing](#manual-testing)
+    - [Testing](#testing-1)
+- [📄 Manual Testing Report – Record Reviews Project](#-manual-testing-report--record-reviews-project)
+  - [📌 Cover Page](#-cover-page)
+- [🧪 Consolidated Manual Testing Matrix](#-consolidated-manual-testing-matrix)
+- [✅ Summary](#-summary)
     - [Browser Testing](#browser-testing)
     - [Validator Testing](#validator-testing)
   - [Technologies Used](#technologies-used)
@@ -28,6 +32,8 @@
     - [Future Features](#future-features)
     - [Known Bugs](#known-bugs)
   - [Deployment Instructions](#deployment-instructions)
+  - [Credits](#credits)
+    - [Code](#code)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
