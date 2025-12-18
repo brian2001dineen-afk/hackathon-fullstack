@@ -3,15 +3,18 @@ from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
-# TODO: revise what decorators are
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
-    list_display = ('title', 'slug', 'status', 'created_on')
-    search_fields = ['title', 'content']
-    list_filter = ('status', 'created_on',)
-    prepopulated_fields = {'slug': ('title',)}
+
+    list_display = ('id', 'title', 'author', 'created_on', 'approved')
+    search_fields = ['title', 'content', 'approved']
+    list_filter = ('created_on', 'approved')
     summernote_fields = ('content',)
 
 
-# Register your models here.
-admin.site.register(Comment)
+@admin.register(Comment)
+class CommentAdmin(SummernoteModelAdmin):
+    list_display = ('id', 'author', 'post', 'created_on', 'approved')
+    search_fields = ['body', 'approved']
+    list_filter = ('created_on', 'approved')
+    summernote_fields = ('body',)

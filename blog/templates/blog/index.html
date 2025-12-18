@@ -28,7 +28,7 @@
                         </div>
                      </div>
                      <a
-                        href="{% url 'post_detail' post.slug %}"
+                        href="{% url 'post_detail' post.id %}"
                         class="post-link"
                      >
                         <h2 class="card-title">{{ post.title }}</h2>
@@ -74,4 +74,4 @@
 <!-- index.html content ends here -->
 {% endblock content %}
 <!-- prettier-ignore -->
-{% block copyright %} Copyright 2025 Brian Dineen {% endblock copyright %}
+{% block copyright %} Copyright 2025 Project Tardis {% endblock copyright %}
